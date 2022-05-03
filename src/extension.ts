@@ -108,12 +108,6 @@ export function activate(context: vscode.ExtensionContext) {
             insertNewCode(args);
         })
     );
-
-    // Open demo file of settings
-    if (!getCommandsFromConf().length) {
-        const path = process.platform === 'win32' ? '\\resources\\' : '/resources/';
-        openFile([`${context.extensionPath}${path}demosettings.json`, 'external']);
-    }
 }
 
 export function deactivate() {}
